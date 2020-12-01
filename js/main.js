@@ -41,7 +41,7 @@
         timeOutId = setInterval(move, 100);
         moving = true;
         result.style.display = "none";
-        tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレット";
+        tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレット";
       }
     },
   });
@@ -62,27 +62,27 @@
           case 0:
           console.log("チです");
           result.textContent = "結果は「チ」でした。";
-          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレットで「チ」が出ました！";
+          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレットで「チ」が出ました！";
           break;
           case 1:
           console.log("ンです");
           result.textContent = "結果は「ン」でした。";
-          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレットで「ン」が出ました！";
+          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレットで「ン」が出ました！";
           break;
           case 2:
           console.log("ポです");
           result.textContent = "結果は「ポ」でした。";
-          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレットで「ポ」が出ました！";
+          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレットで「ポ」が出ました！";
           break;
           case 3:
           console.log("コです");
           result.textContent = "結果は「コ」でした。";
-          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレットで「コ」が出ました！";
+          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレットで「コ」が出ました！";
           break;
           default:
           console.log("エラー");
           result.textContent = "エラー";
-          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/mimikaki/&text=チンポコルーレットでエラーが出ました…";
+          tweetbutton.href = "http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレットでエラーが出ました…";
         }
       }
     },
