@@ -1,10 +1,3 @@
-var db = firebase.firestore();
-db.collection("counts").get().then((querySnapshot)=>{
-  querySnapshot.forEach((doc) =>{
-    console.log(doc.dat());
-  });
-});
-
 const result = document.getElementById("result");
 const tweetbutton = document.getElementById("tweetbutton");
 
