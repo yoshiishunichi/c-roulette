@@ -27,12 +27,31 @@
       <div id="start" @click="tapStart">スタートっ！</div>
       <div id="stop" @click="tapStop">ストップっ！</div>
     </div>
-    <p id="result">結果は「チ」でした。</p>
+    <p id="result">スタートボタンを押してください</p>
     
     <div id="tweet">
       <a href="http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレット" id="tweetbutton" target="_blank">ツイートする</a>
     </div>
-  </div>
+  </div>  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAO_beoYxQfixXCI4an4p7hcEKeDXE5vVE",
+      authDomain: "c-roulette.firebaseapp.com",
+      databaseURL: "https://c-roulette.firebaseio.com",
+      projectId: "c-roulette",
+      storageBucket: "c-roulette.appspot.com",
+      messagingSenderId: "649973346613",
+      appId: "1:649973346613:web:935be74bbc130a56681c7c",
+      measurementId: "G-WZHQ0NPRKE"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
