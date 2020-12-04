@@ -33,27 +33,28 @@
       <a href="http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレット" id="tweetbutton" target="_blank">ツイートする</a>
     </div>
   </div>  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
   
-  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-  <script src="js/main.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+  
   <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
-      apiKey: "AIzaSyAO_beoYxQfixXCI4an4p7hcEKeDXE5vVE",
-      authDomain: "c-roulette.firebaseapp.com",
-      databaseURL: "https://c-roulette.firebaseio.com",
-      projectId: "c-roulette",
-      storageBucket: "c-roulette.appspot.com",
-      messagingSenderId: "649973346613",
-      appId: "1:649973346613:web:935be74bbc130a56681c7c",
-      measurementId: "G-WZHQ0NPRKE"
+      apiKey: "AIzaSyD7bWyfvQZHNrRGZTKh49ztQHDbxu-v4Bk",
+      authDomain: "chimpoko-roulette.firebaseapp.com",
+      projectId: "chimpoko-roulette",
+      storageBucket: "chimpoko-roulette.appspot.com",
+      messagingSenderId: "124026382192",
+      appId: "1:124026382192:web:5a5db27802eafb10ac51b5",
+      measurementId: "G-F0QTJ0WWLR"
     };
-    
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    var db = firebase.firestore();
-    console.log(db.collection("counts").doc("JlujiVs3mNGNBU4OgiVz").get());
   </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
