@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta http-equiv="Cache-Control" content="no-cache">
   <meta charset="utf-8">
-  <title>チンポコルーレット</title> 
+  <title>チンポコルーレット</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 <body>
   <div id="container">
@@ -28,33 +32,19 @@
       <div id="stop" @click="tapStop">ストップっ！</div>
     </div>
     <p id="result">スタートボタンを押してください</p>
-    
+    <p id="history-label">~現在のデータ~</p>
+    <p id="history">データ取得中…</p>
     <div id="tweet">
-      <a href="http://twitter.com/share?url=https://yoshiishunichi.github.io/c-roulette/&text=チンポコルーレット" id="tweetbutton" target="_blank">ツイートする</a>
+      <a href="http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレット" id="tweetbutton" target="_blank">ツイートする</a>
     </div>
-  </div>  
+  </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
   
   <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
   
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyD7bWyfvQZHNrRGZTKh49ztQHDbxu-v4Bk",
-      authDomain: "chimpoko-roulette.firebaseapp.com",
-      projectId: "chimpoko-roulette",
-      storageBucket: "chimpoko-roulette.appspot.com",
-      messagingSenderId: "124026382192",
-      appId: "1:124026382192:web:5a5db27802eafb10ac51b5",
-      measurementId: "G-F0QTJ0WWLR"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

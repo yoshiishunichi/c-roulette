@@ -1,0 +1,21 @@
+/* モバイル向けレイアウト */
+@media all and (max-width: 700px) {
+
+  .chimpokodiv{
+    width: 20%;
+    margin-right:2%;
+    text-align: center;
+  }
+
+  #start{
+    width: 30%;
+    text-align: center;
+  }
+  #stop{
+    width: 30%;
+    text-align: center;
+  }
+  #history{
+    font-size: 10px;
+  }
+}
