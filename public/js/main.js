@@ -101,7 +101,7 @@ var start = new Vue({
       }
       pushsound.play();
       timeOutId = setInterval(move, 100);
-      setTimeout(stopActivate, 500);
+      setTimeout(stopActivate, 700);
       
       moving = true;
       result.textContent = "回転中…";
