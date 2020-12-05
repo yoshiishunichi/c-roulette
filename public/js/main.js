@@ -87,6 +87,11 @@ function move(){
   ds[num].style.marginLeft = kyori + "px";
 }
 let timeOutId;
+let stopActive = true;
+
+function stopActivate(){
+  stopActive = false;
+}
 var start = new Vue({
   el:"#start",
   methods: {
@@ -96,6 +101,8 @@ var start = new Vue({
       }
       pushsound.play();
       timeOutId = setInterval(move, 100);
+      setTimeout(stopActivate, 500);
+      
       moving = true;
       result.textContent = "回転中…";
       tweetbutton.href = "http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレット";
@@ -109,6 +116,10 @@ var stop = new Vue({
       if (!moving){
         return;
       }
+      if (stopActive){
+        return;
+      }
+      stopActive = true;
       pushsound.play();
       clearInterval(timeOutId);
       moving = false;
