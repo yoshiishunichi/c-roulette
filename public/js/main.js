@@ -17,13 +17,13 @@ let access = false;
 const history = document.getElementById("history");
 
 const config = {
-  apiKey: "AIzaSyD7bWyfvQZHNrRGZTKh49ztQHDbxu-v4Bk",
-  authDomain: "chimpoko-roulette.firebaseapp.com",
+  apiKey: "apikey",
+  authDomain: "authDomain",
   projectId: "chimpoko-roulette",
-  storageBucket: "chimpoko-roulette.appspot.com",
-  messagingSenderId: "124026382192",
-  appId: "1:124026382192:web:5a5db27802eafb10ac51b5",
-  measurementId: "G-F0QTJ0WWLR"
+  storageBucket: "sBucket",
+  messagingSenderId: "msenderId",
+  appId: "appId",
+  measurementId: "mmId"
 }
 firebase.initializeApp(config);
 const db = firebase.firestore();
@@ -31,7 +31,7 @@ const db = firebase.firestore();
 const numberRef = db.collection('numbers').doc('WGhjEW33p5snZ3bnEKKc');
 const numberDoc = numberRef.get().then(function(doc){
   if (doc.exists){
-    console.log("document data:", doc.data());
+
     chi = doc.get("chi");
     nn = doc.get("nn");
     po = doc.get("po");
@@ -49,13 +49,17 @@ const numberDoc = numberRef.get().then(function(doc){
     nnP = parseFloat(nnP * 100).toFixed(2);
     poP = parseFloat(poP * 100).toFixed(2);
     koP = parseFloat(koP * 100).toFixed(2);
-    
+    if (all === 0) {
+      chiP = 0;
+      nnP = 0;
+      poP = 0;
+      koP = 0;
+    }
     const historyText = "チ: "+ String(chi) +"回("+String(chiP)+"%), ン: "+String(nn)+"回("+String(nnP)+"%), ポ: "+String(po)+"回("+String(poP)+"%), コ: "+String(ko)+"回("+String(koP)+"%)";
     history.textContent = historyText;
     access = true;
   }
   else {
-    console.log("no such document");
     history.textContent = "データ取得失敗…";
   }
 });
@@ -100,7 +104,7 @@ var start = new Vue({
         return;
       }
       pushsound.play();
-      timeOutId = setInterval(move, 100);
+      timeOutId = setInterval(move, 50);
       setTimeout(stopActivate, 700);
       
       moving = true;
@@ -126,7 +130,7 @@ var stop = new Vue({
       
       switch(num){
         case 0:
-        console.log("チです");
+
         result.textContent = "結果は「チ」でした。";
         tweetbutton.href = "http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレットで「チ」が出ました！";
         if (access){
@@ -143,7 +147,7 @@ var stop = new Vue({
         }
         break;
         case 1:
-        console.log("ンです");
+
         result.textContent = "結果は「ン」でした。";
         tweetbutton.href = "http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレットで「ン」が出ました！";
         if (access){
@@ -160,7 +164,7 @@ var stop = new Vue({
         }
         break;
         case 2:
-        console.log("ポです");
+
         result.textContent = "結果は「ポ」でした。";
         tweetbutton.href = "http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレットで「ポ」が出ました！";
         if (access){
@@ -177,7 +181,7 @@ var stop = new Vue({
         }
         break;
         case 3:
-        console.log("コです");
+
         result.textContent = "結果は「コ」でした。";
         tweetbutton.href = "http://twitter.com/share?url=https://chimpoko-roulette.web.app/&text=チンポコルーレットで「コ」が出ました！";
         if (access){
